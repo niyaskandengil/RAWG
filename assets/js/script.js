@@ -1,23 +1,13 @@
 'use strict';
 
 
-
-/**
- * add event on multiple elements
- */
-
 const addEventOnElements = function (elements, eventType, callback) {
   for (let i = 0, len = elements.length; i < len; i++) {
     elements[i].addEventListener(eventType, callback);
   }
 }
 
-
-
-/**
- * MOBILE NAVBAR
- * navbar will show after clicking menu button
- */
+// Mobile Nav Bar
 
 const navbar = document.querySelector("[data-navbar]");
 const navToggler = document.querySelector("[data-nav-toggler]");
@@ -39,10 +29,9 @@ addEventOnElements(navLinks, "click", navClose);
 
 
 
-/**
- * HEADER and BACK TOP BTN
- * header and back top btn will be active after scrolled down to 100px of screen
- */
+
+//  HEADER and BACK TOP BTN
+
 
 const header = document.querySelector("[data-header]");
 const backTopBtn = document.querySelector("[data-back-top-btn]");
@@ -61,9 +50,9 @@ window.addEventListener("scroll", activeEl);
 
 
 
-/**
- * Button hover ripple effect
- */
+
+//  * Button hover ripple effect
+
 
 const buttons = document.querySelectorAll("[data-btn]");
 
@@ -76,9 +65,7 @@ addEventOnElements(buttons, "mousemove", buttonHoverRipple);
 
 
 
-/**
- * Scroll reveal
- */
+/** Scroll reveal */
 
 const revealElements = document.querySelectorAll("[data-reveal]");
 
@@ -97,10 +84,7 @@ window.addEventListener("scroll", revealElementOnScroll);
 window.addEventListener("load", revealElementOnScroll);
 
 
-
-/**
- * Custom cursor
- */
+//  Custom cursor
 
 const cursor = document.querySelector("[data-cursor]");
 const hoverElements = [...document.querySelectorAll("a"), ...document.querySelectorAll("button")];
